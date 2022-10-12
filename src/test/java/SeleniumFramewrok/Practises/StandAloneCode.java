@@ -23,6 +23,7 @@ public class StandAloneCode {
 		driver.findElement(By.id("userEmail")).sendKeys("harshicr123@gmail.com");
 		driver.findElement(By.id("userPassword")).sendKeys("Harshi@123");
 		driver.findElement(By.id("login")).click();
+		System.out.println("Successfully loggedin");
 		
 		List<WebElement> li=driver.findElements(By.cssSelector(".mb-3"));
 	    WebElement productToBeSelected=	li.stream().filter(s->s.findElement(By.cssSelector("b")).getText().equals("ADIDAS ORIGINAL")).findFirst().orElse(null);
