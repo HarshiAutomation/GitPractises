@@ -38,5 +38,7 @@ public class StandAloneCode {
 	List<WebElement> cartItems=   driver.findElements(By.cssSelector(".infoWrap h3"));
 	Boolean match=cartItems.stream().anyMatch(cart->cart.getText().equalsIgnoreCase("ADIDAS ORIGINAL"));
 	Assert.assertTrue(match);
+	System.out.println("Successfully added ADIDAS ORIGINAL");
+
 	}
 }
